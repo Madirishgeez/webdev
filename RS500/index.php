@@ -35,26 +35,74 @@ if (!$dataListResults) {
 ?>
 
 <body>
-    <!-- <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
-        <div class="uk-navbar-left">
-            <ul class="uk-navbar-nav">
-                <li class="uk-active"><a href="">Schedule</a></li>
-                <li class="uk-parent"><a href="">Training</a></li>
-                <li><a href="">Log Out</a></li>
-            </ul>
-        </div>
-        <div class="uk-navbar-right">
-            <img src="imgs/fit.png">
-        </div>
-    </nav> -->
+
     <div class="uk-section-muted">
         <div class="uk-container">
             <h2>The best albums of all time 2012</h2>
         </div>
-        <div class="uk-container-expand">
+        <nav class="uk-navbar-container uk-width1-10" uk-navbar>
+            <div class="uk-navbar">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-active"><a href="#">500 - 451</a></li>
+                    <div class="uk-container-expand">
+                        <div class="uk-child-width-1-4@s uk-grid-match" uk-grid>
+                            <?php
+                                    while ($row = $dataListResults->fetch_assoc()) {
+                                        $number = $row['Number'];
+                                        $artist = $row['Artist'];
+                                        $album = $row['Album'];
+                                        echo "
+                    <div class='uk-card uk-card-body uk-card-default 'style='background-image: url(images/dark.jpg);'>
+                         <h3 class ='uk-card-title'>$number. $album </h3> 
+                          $artist
+                         </div>";
+                                        if ($number <= 451) {
+                                            break;
+                                        }
+                                    }
+                                    ?>
+                        </div>
+                    </div>
+                    <li class="uk-active"><a href="">450 - 401</a></li>
+                    <div class="uk-container-expand">
+                        <div class="uk-child-width-1-4@s uk-grid-match">
+                            <?php
+                            while ($row = $dataListResults->fetch_assoc()) {
+                                $number = $row['Number'];
+                                $artist = $row['Artist'];
+                                $album = $row['Album'];
+                                echo " <div> 
+
+                    <div class='uk-card uk-card-body uk-card-default'style='background-image: url(images/dark.jpg);'>
+                         <h3 class ='uk-card-title'>$number. $album </h3> 
+                          $artist
+                         </div>
+                         
+                       </div> ";
+                                if ($number <= 401) {
+                                    break;
+                                }
+                            }
+                            ?>
+                        </div>
+                        <li class="uk-active"><a href="">400 - 351</a></li>
+                        <li class="uk-active"><a href="">350 - 301</a></li>
+                        <li class="uk-active"><a href="">300 - 251</a></li>
+                        <li class="uk-active"><a href="">250 - 201</a></li>
+                        <li class="uk-active"><a href="">200 - 151</a></li>
+                        <li class="uk-active"><a href="">150 - 101</a></li>
+                        <li class="uk-active"><a href="">100 - 51</a></li>
+                        <li class="uk-active"><a href="">50 - 1</a></li>
+                        <li><a href="">Log Out</a></li>
+                </ul>
+            </div>
+
+        </nav>
+
+        <!-- <div class="uk-container-expand">
             <div class="uk-child-width-1-4@s uk-grid-match" uk-grid>
                 <?php
-               while ($row = $dataListResults->fetch_assoc()) {
+                while ($row = $dataListResults->fetch_assoc()) {
                     $number = $row['Number'];
                     $artist = $row['Artist'];
                     $album = $row['Album'];
@@ -69,7 +117,7 @@ if (!$dataListResults) {
                 }
                 ?>
             </div>
-        </div>
+        </div> -->
 </body>
 
 </html>
