@@ -7,7 +7,7 @@ include("dbconn.php");
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="gui.css" type="text/css" media="screen" />
+    <link rel="stylesheet" type="text/css" media="screen" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Rolling Stones</title>
@@ -33,34 +33,38 @@ if (!$dataListResults) {
 }
 // print_r($dataListResults);
 ?>
-
+<!-- $(function(){
+    $('a#500-451').on('click'.function(){
+        $('500-451').show();
+    }} -->
 <body>
 
     <div class="uk-section-muted">
         <div class="uk-container">
             <h2>The best albums of all time 2012</h2>
         </div>
-        <nav class="uk-navbar-container uk-width1-10" uk-navbar>
+        <nav class="uk-navbar-container uk-width-1-10" uk-navbar>
             <div class="uk-navbar">
                 <ul class="uk-navbar-nav">
-                    <li class="uk-active"><a href="#">500 - 451</a></li>
-                    <div class="uk-container-expand">
-                        <div class="uk-child-width-1-4@s uk-grid-match" uk-grid>
+                    <li class ="uk-active"><a href="">500 - 451</a></li>
+                    <div id=500-451 class="uk-container style='display:none'">
+                        <div class="uk-chld-width-1-4@s uk-grid-match" uk-grid>
                             <?php
-                                    while ($row = $dataListResults->fetch_assoc()) {
-                                        $number = $row['Number'];
-                                        $artist = $row['Artist'];
-                                        $album = $row['Album'];
-                                        echo "
-                    <div class='uk-card uk-card-body uk-card-default 'style='background-image: url(images/dark.jpg);'>
+                            while ($row = $dataListResults->fetch_assoc()) {
+                                $number = $row['Number'];
+                                $artist = $row['Artist'];
+                                $album = $row['Album'];
+                                echo "
+                    <div class='uk-card uk-card-body uk-card-default style='background-image: url(images/dark.jpg);''>
                          <h3 class ='uk-card-title'>$number. $album </h3> 
                           $artist
                          </div>";
-                                        if ($number <= 451) {
-                                            break;
-                                        }
-                                    }
-                                    ?>
+                                if ($number <= 451) {
+                                    break;
+                                }
+                            }
+                            ?>
+                            <div> <a href="" uk-totop></a> </div>
                         </div>
                     </div>
                     <li class="uk-active"><a href="">450 - 401</a></li>
@@ -86,14 +90,171 @@ if (!$dataListResults) {
                             ?>
                         </div>
                         <li class="uk-active"><a href="">400 - 351</a></li>
+                        <div class="uk-container-expand">
+                        <div class="uk-child-width-1-4@s uk-grid-match" uk-grid>
+                            <!-- <?php
+                            while ($row = $dataListResults->fetch_assoc()) {
+                                $number = $row['Number'];
+                                $artist = $row['Artist'];
+                                $album = $row['Album'];
+                                echo "
+                    <div class='uk-card uk-card-body uk-card-default 'style='background-image: url(images/dark.jpg);'>
+                         <h3 class ='uk-card-title'>$number. $album </h3> 
+                          $artist
+                         </div>";
+                                if ($number <= 451) {
+                                    break;
+                                }
+                            }
+                            ?> -->
+                            <div> <a href="" uk-totop></a> </div>
+                        </div>
+                    </div>
                         <li class="uk-active"><a href="">350 - 301</a></li>
+                        <div class="uk-container-expand">
+                        <div class="uk-child-width-1-4@s uk-grid-match" uk-grid>
+                            <!-- <?php
+                            while ($row = $dataListResults->fetch_assoc()) {
+                                $number = $row['Number'];
+                                $artist = $row['Artist'];
+                                $album = $row['Album'];
+                                echo "
+                    <div class='uk-card uk-card-body uk-card-default 'style='background-image: url(images/dark.jpg);'>
+                         <h3 class ='uk-card-title'>$number. $album </h3> 
+                          $artist
+                         </div>";
+                                if ($number <= 451) {
+                                    break;
+                                }
+                            }
+                            ?> -->
+                            <div> <a href="" uk-totop></a> </div>
+                        </div>
+                    </div>
                         <li class="uk-active"><a href="">300 - 251</a></li>
+                        <div class="uk-container-expand">
+                        <div class="uk-child-width-1-4@s uk-grid-match" uk-grid>
+                            <!-- <?php
+                            while ($row = $dataListResults->fetch_assoc()) {
+                                $number = $row['Number'];
+                                $artist = $row['Artist'];
+                                $album = $row['Album'];
+                                echo "
+                    <div class='uk-card uk-card-body uk-card-default 'style='background-image: url(images/dark.jpg);'>
+                         <h3 class ='uk-card-title'>$number. $album </h3> 
+                          $artist
+                         </div>";
+                                if ($number <= 451) {
+                                    break;
+                                }
+                            }
+                            ?> -->
+                            <div> <a href="" uk-totop></a> </div>
+                        </div>
+                    </div>
                         <li class="uk-active"><a href="">250 - 201</a></li>
+                        <div class="uk-container-expand">
+                        <div class="uk-child-width-1-4@s uk-grid-match" uk-grid>
+                            <!-- <?php
+                            while ($row = $dataListResults->fetch_assoc()) {
+                                $number = $row['Number'];
+                                $artist = $row['Artist'];
+                                $album = $row['Album'];
+                                echo "
+                    <div class='uk-card uk-card-body uk-card-default 'style='background-image: url(images/dark.jpg);'>
+                         <h3 class ='uk-card-title'>$number. $album </h3> 
+                          $artist
+                         </div>";
+                                if ($number <= 451) {
+                                    break;
+                                }
+                            }
+                            ?> -->
+                            <div> <a href="" uk-totop></a> </div>
+                        </div>
+                    </div>
                         <li class="uk-active"><a href="">200 - 151</a></li>
-                        <li class="uk-active"><a href="">150 - 101</a></li>
-                        <li class="uk-active"><a href="">100 - 51</a></li>
+                        <div class="uk-container-expand">
+                        <div class="uk-child-width-1-4@s uk-grid-match" uk-grid>
+                            <!-- <?php
+                            while ($row = $dataListResults->fetch_assoc()) {
+                                $number = $row['Number'];
+                                $artist = $row['Artist'];
+                                $album = $row['Album'];
+                                echo "
+                    <div class='uk-card uk-card-body uk-card-default 'style='background-image: url(images/dark.jpg);'>
+                         <h3 class ='uk-card-title'>$number. $album </h3> 
+                          $artist
+                         </div>";
+                                if ($number <= 451) {
+                                    break;
+                                }
+                            }
+                            ?> -->
+                            <div> <a href="" uk-totop></a> </div>
+                        </div>
+                    </div>
+                        <li class="uk-active"><a href="">150 - 101</a></li><div class="uk-container-expand">
+                        <div class="uk-child-width-1-4@s uk-grid-match" uk-grid>
+                            <!-- <?php
+                            while ($row = $dataListResults->fetch_assoc()) {
+                                $number = $row['Number'];
+                                $artist = $row['Artist'];
+                                $album = $row['Album'];
+                                echo "
+                    <div class='uk-card uk-card-body uk-card-default 'style='background-image: url(images/dark.jpg);'>
+                         <h3 class ='uk-card-title'>$number. $album </h3> 
+                          $artist
+                         </div>";
+                                if ($number <= 451) {
+                                    break;
+                                }
+                            }
+                            ?> -->
+                            <div> <a href="" uk-totop></a> </div>
+                        </div>
+                    </div>
+                        <li class="uk-active"><a href="">100 - 51</a></li><div class="uk-container-expand">
+                        <div class="uk-child-width-1-4@s uk-grid-match" uk-grid>
+                            <!-- <?php
+                            while ($row = $dataListResults->fetch_assoc()) {
+                                $number = $row['Number'];
+                                $artist = $row['Artist'];
+                                $album = $row['Album'];
+                                echo "
+                    <div class='uk-card uk-card-body uk-card-default 'style='background-image: url(images/dark.jpg);'>
+                         <h3 class ='uk-card-title'>$number. $album </h3> 
+                          $artist
+                         </div>";
+                                if ($number <= 451) {
+                                    break;
+                                }
+                            }
+                            ?> -->
+                            <div> <a href="" uk-totop></a> </div>
+                        </div>
+                    </div>
                         <li class="uk-active"><a href="">50 - 1</a></li>
-                        <li><a href="">Log Out</a></li>
+                        <div class="uk-container-expand">
+                        <div class="uk-child-width-1-4@s uk-grid-match" uk-grid>
+                            <!-- <?php
+                            while ($row = $dataListResults->fetch_assoc()) {
+                                $number = $row['Number'];
+                                $artist = $row['Artist'];
+                                $album = $row['Album'];
+                                echo "
+                    <div class='uk-card uk-card-body uk-card-default 'style='background-image: url(images/dark.jpg);'>
+                         <h3 class ='uk-card-title'>$number. $album </h3> 
+                          $artist
+                         </div>";
+                                if ($number <= 451) {
+                                    break;
+                                }
+                            }
+                            ?> -->
+                            <div> <a href="" uk-totop></a> </div>
+                        </div>
+                    </div>
                 </ul>
             </div>
 
